@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+/*
+ 
+ ##     ## ########    ###    ########  ######## ########  
+ ##     ## ##         ## ##   ##     ## ##       ##     ## 
+ ##     ## ##        ##   ##  ##     ## ##       ##     ## 
+ ######### ######   ##     ## ##     ## ######   ########  
+ ##     ## ##       ######### ##     ## ##       ##   ##   
+ ##     ## ##       ##     ## ##     ## ##       ##    ##  
+ ##     ## ######## ##     ## ########  ######## ##     ## 
+ 
+*/
+header{
+  height: 56px;
+  background: linear-gradient(#0000007e, #FFFFFF);
+}
+header .logo{
+  padding: 15px ;
+}
+
+
+/*
+ 
+ ##     ##    ###    #### ##    ## 
+ ###   ###   ## ##    ##  ###   ## 
+ #### ####  ##   ##   ##  ####  ## 
+ ## ### ## ##     ##  ##  ## ## ## 
+ ##     ## #########  ##  ##  #### 
+ ##     ## ##     ##  ##  ##   ### 
+ ##     ## ##     ## #### ##    ## 
+ 
+*/
+
+main .container {
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+}
+.downloadBox{
+  display: flex;
+  width: 14vw; 
+  height: 14vw;
+  border: 1px solid gray;
+  border-radius: 12px;
+  margin-bottom: 56px;
+  background-color: rgba(0, 0, 0, .2);
+  justify-content: center;
+  transition: opacity .4s ease;
+  cursor: pointer;
+}
+
+.downloadBox svg{
+  width: 90%;
+  height: 90%;
+  transition: opacity .4s ease;
+  cursor: pointer !important;
+}
+
+svg:hover{
+ opacity:.4;
+}
