@@ -1,11 +1,13 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: 'Montserrat', sans-serif;
 }
+
 /*
  
  ##     ## ########    ###    ########  ######## ########  
@@ -17,12 +19,13 @@ body{
  ##     ## ######## ##     ## ########  ######## ##     ## 
  
 */
-header{
+header {
   height: 56px;
   background: linear-gradient(#0000007e, #FFFFFF);
 }
-header .logo{
-  padding: 15px ;
+
+header .logo {
+  padding: 15px;
 }
 
 
@@ -41,13 +44,14 @@ header .logo{
 main .container {
   height: calc(100vh - 56px);
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.downloadBox{
+
+.downloadBox {
   display: flex;
-  width: 14vw; 
+  width: 14vw;
   height: 14vw;
   border: 1px solid gray;
   border-radius: 12px;
@@ -58,13 +62,76 @@ main .container {
   cursor: pointer;
 }
 
-.downloadBox svg{
+.downloadBox svg {
   width: 90%;
   height: 90%;
   transition: opacity .4s ease;
   cursor: pointer !important;
 }
 
-svg:hover{
- opacity:.4;
+svg:hover {
+  opacity: .4;
+}
+
+.downloading svg {
+  /*Скрытие блока с загрузкой и показ loader*/
+  display: none;
+}
+
+.downloading .loadingBox {
+  display: flex !important;
+}
+
+.loadingBox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader {
+  border-right: 1px solid black;
+  border-radius: 50%;
+  animation: rotating 1s ease-in-out infinite alternate;
+  width: 50%;
+  height: 50%;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.done {
+  height: auto !important;
+  width: auto !important;
+}
+
+.done .downloadBox {
+  display: none;
+}
+
+.done .doneWrapper {
+  display: block;
+}
+
+.doneWrapper {
+  display: none;
+}
+
+.doneWrapper .list {
+  list-style-position: inside;
+  -moz-column-count: 2;
+  /* Firefox */
+  -webkit-column-count: 2;
+  /* Safari and Chrome */
+  column-count: 3;
+  list-style-type: decimal;
 }
